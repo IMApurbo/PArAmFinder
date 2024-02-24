@@ -50,7 +50,7 @@ def crawl(url, depth, base_url, print_header=True):
 
     links = extract_links(url, base_url)
     for link in links:
-        print(link)  # Print each filtered link individually
+        print(f"{BLUE}[+]{RESET} {RED}{link}{RESET}")  # Print each filtered link individually
         crawl(link, depth - 1, base_url, print_header=False)
 
 if __name__ == "__main__":
